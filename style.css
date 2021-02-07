@@ -1,8 +1,8 @@
-#foodInput {
+#searchBoxInput {
     font-size: 25px;
 }
 
-#search {
+#searchButton {
     font-size: 25px;
 }
 
@@ -23,7 +23,7 @@
     border-radius: 20px 20px 0px 0px;
 }
 
-#foodsData {
+#foodIngredientsDetail {
     text-align: center;
     /* background-color: rgb(255, 238, 221); */
     border-radius: 30px;

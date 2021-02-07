@@ -1,12 +1,12 @@
 const searchButton = document.getElementById('searchButton');
 searchButton.addEventListener('click', function() {
-    const foodName = document.getElementById('foodInput').value;
+    const foodName = document.getElementById('searchBoxInput').value;
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${ foodName }`)
         .then(res => res.json())
         .then(data => {
-            document.getElementById('foods').innerHTML = "";
-            document.getElementById('foodsData').innerHTML = ' ';
-            const foods = document.getElementById('foods');
+            document.getElementById('allFoodItems').innerHTML = "";
+            document.getElementById('foodIngredientsDetail').innerHTML = ' ';
+            const foods = document.getElementById('allFoodItems');
             data.meals.forEach(element => {
                 const food = document.createElement('div')
                 food.innerHTML = `
@@ -28,9 +28,9 @@ let foodDetailsShow = foodName => {
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${ foodName }`)
         .then(res => res.json())
         .then(data => {
-            let foodData = document.getElementById('foodsData');
-            document.getElementById('foodsData').innerHTML = ' ';
-            document.getElementById('foodsData').style.display = 'block';
+            let foodData = document.getElementById('foodIngredientsDetail');
+            document.getElementById('foodIngredientsDetail').innerHTML = ' ';
+            document.getElementById('foodIngredientsDetail').style.display = 'block';
             let foodDetails = document.createElement('div')
             foodDetails.innerHTML = `
             <img src="${ data.meals[0].strMealThumb }">
