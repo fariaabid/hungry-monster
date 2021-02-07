@@ -1,31 +1,31 @@
 const searchButton = document.getElementById('searchButton');
 searchButton.addEventListener('click', function() {
-    const foodName = document.getElementById('searchBoxInput').value;
-    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${ foodName }`)
+    const searchBoxInput = document.getElementById('searchBoxInput').value;
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${ searchBoxInput }`)
         .then(res => res.json())
         .then(data => {
-            document.getElementById('allFoodItems').innerHTML = "";
-            document.getElementById('foodIngredientsDetail').innerHTML = ' ';
-            const foods = document.getElementById('allFoodItems');
-            data.meals.forEach(element => {
-                const food = document.createElement('div')
-                food.innerHTML = `
-            <img src="${ element.strMealThumb }" onClick="foodDetailsShow(${ element.idMeal })">
-            <h1 onClick="foodDetailsShow(${ element.idMeal })" >${ element.strMeal }</h1>
+            let foodItemsInnerHtml = document.getElementById('allFoodItems').innerHTML = "";
+            let foodIngredientsDetail = document.getElementById('foodIngredientsDetail').innerHTML = ' ';
+            const allFoodItems = document.getElementById('allFoodItems');
+            data.meals.forEach(fooditem => {
+                const foodBox = document.createElement('div')
+                foodBox.innerHTML = `
+            <img src="${ fooditem.strMealThumb }" onClick="foodDetailsShow(${ fooditem.idMeal })">
+            <h1 onClick="foodDetailsShow(${ fooditem.idMeal })" >${ fooditem.strMeal }</h1>
             `;
-                food.className = "card";
-                foods.appendChild(food);
+                foodBox.className = "card";
+                allFoodItems.appendChild(foodBox);
             });
         })
         .catch(error => {
             const errorMessage = document.createElement('h3')
             errorMessage.innerHTML = `Please input a valid food name.`;
-            foods.appendChild(errorMessage);
+            allFoodItems.appendChild(errorMessage);
         })
 })
 
-let foodDetailsShow = foodName => {
-    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${ foodName }`)
+let foodDetailsShow = searchBoxInput => {
+    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${ searchBoxInput }`)
         .then(res => res.json())
         .then(data => {
             let foodData = document.getElementById('foodIngredientsDetail');
