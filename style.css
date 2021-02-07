@@ -1,5 +1,5 @@
 #searchBoxInput {
-    font-size: 25px;
+    font-size: 15px;
 }
 
 #searchButton {
@@ -8,32 +8,24 @@
 
 .card {
     width: 300px;
-    border-radius: 20px;
     margin: 35px;
     font-size: 15px;
 }
 
 .card h3 {
-    font-size: 25px;
+    font-size: 35px;
     padding: 15px 5px;
     text-align: center;
 }
 
-.card img {
-    border-radius: 20px 20px 0px 0px;
-}
-
 #foodIngredientsDetail {
     text-align: center;
-    /* background-color: rgb(255, 238, 221); */
-    border-radius: 30px;
     padding: 20px 0px;
     display: none;
 }
 
 .food-items-details img {
-    width: 60%;
-    border-radius: 30px;
+    width: 100%;
 }
 
 .food-items-details h1 {
@@ -42,7 +34,6 @@
 }
 
 .food-items-details h3 {
-    padding: 3px 0px;
     font-size: 25px;
     text-align: left;
 }
@@ -54,5 +45,5 @@
 
 .ingredient {
     font-weight: bold;
-    font-size: xx-large;
+    font-size: large;
 }
