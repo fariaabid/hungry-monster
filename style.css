@@ -9,11 +9,11 @@
 .card {
     width: 300px;
     border-radius: 20px;
-    margin: 5px;
+    margin: 35px;
     font-size: 15px;
 }
 
-.card h1 {
+.card h3 {
     font-size: 25px;
     padding: 15px 5px;
     text-align: center;
@@ -31,23 +31,23 @@
     display: none;
 }
 
-.food-details img {
+.food-items-details img {
     width: 60%;
     border-radius: 30px;
 }
 
-.food-details h1 {
+.food-items-details h1 {
     padding: 5px 0px;
     font-size: 30px;
 }
 
-.food-details h3 {
+.food-items-details h3 {
     padding: 3px 0px;
     font-size: 25px;
     text-align: left;
 }
 
-.food-details {
+.food-items-details {
     width: 50%;
     margin: 0 auto;
 }
