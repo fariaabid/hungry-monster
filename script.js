@@ -19,7 +19,7 @@ searchButton.addEventListener('click', function() {
         })
         .catch(error => {
             const errorMessage = document.createElement('h3')
-            errorMessage.innerHTML = `Please input a valid food name.`;
+            errorMessage.innerHTML = `Please,input a valid food name.`;
             allFoodItems.appendChild(errorMessage);
         })
 })
