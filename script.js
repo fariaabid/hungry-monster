@@ -35,7 +35,6 @@ let foodDetailsShow = searchBoxInput => {
             foodIngredientsDetail.innerHTML = `
             <img src="${ data.meals[0].strMealThumb }">
             <h1>${ data.meals[0].strMeal }</h1>
-            <br>
             <h4>Ingredients:</h4>
             <p><span class="ingredient"><i class="fas fa-check"></i></span>${data.meals[0].strIngredient1}</p>
             <p><span class="ingredient"><i class="fas fa-check"></i></span>${data.meals[0].strIngredient2}</p>
