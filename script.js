@@ -43,6 +43,11 @@ let foodDetailsShow = searchBoxInput => {
             <p><span class="ingredient"><i class="fas fa-check"></i></span>${data.meals[0].strIngredient4}</p>
             <p><span class="ingredient"><i class="fas fa-check"></i></span>${data.meals[0].strIngredient5}</p>
             <p><span class="ingredient"><i class="fas fa-check"></i></span>${data.meals[0].strIngredient6}</p>
+            <p><span class="ingredient"><i class="fas fa-check"></i></span>${data.meals[0].strIngredient7}</p>
+            <p><span class="ingredient"><i class="fas fa-check"></i></span>${data.meals[0].strIngredient8}</p>
+            <p><span class="ingredient"><i class="fas fa-check"></i></span>${data.meals[0].strIngredient9}</p>
+            <p><span class="ingredient"><i class="fas fa-check"></i></span>${data.meals[0].strIngredient10}</p>
+            <p><span class="ingredient"><i class="fas fa-check"></i></span>${data.meals[0].strIngredient11}</p>
             `;
             foodIngredientsDetail.className = "food-items-details";
             foodItemData.appendChild(foodIngredientsDetail);
